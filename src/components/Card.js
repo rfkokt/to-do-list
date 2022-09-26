@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 
 export default function Card({ name, date, onDelete, to }) {
   return (
-    <div className="animate-slides w-full max-w-sm bg-white rounded-xl drop-shadow-md flex flex-col justify-between">
+    <div
+      className="animate-slides w-full max-w-sm bg-white rounded-xl drop-shadow-md flex flex-col justify-between"
+      data-cy="activity-item"
+    >
       <Link to={to} data-cy="activity-item">
         <h1
           className="p-5 h-48 rounded-t-lg font-bold font-lg cursor-pointer"

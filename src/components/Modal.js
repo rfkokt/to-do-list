@@ -18,7 +18,12 @@ export default function Modal({
   return (
     <div data-cy={data_cy}>
       <Transition appear show={view} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={handleClose}>
+        <Dialog
+          as="div"
+          className="relative z-10"
+          onClose={handleClose}
+          data-cy={data_cy}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
