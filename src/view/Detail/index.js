@@ -162,7 +162,7 @@ export default function Detail() {
     <>
       <div className="flex justify-between">
         <div className="flex items-center">
-          <Link to={"/"}>
+          <Link to={"/"} data-cy="todo-back-button">
             <HiChevronLeft size={50} className="mr-10" />
           </Link>
           {editTitle ? (
@@ -179,11 +179,14 @@ export default function Detail() {
               onBlur={handlePatchData}
             />
           ) : (
-            <div className="font-black text-4xl mr-10">
+            <div className="font-black text-4xl mr-10" data-cy="todo-title">
               {dataDetails?.title}
             </div>
           )}
-          <div className="item-center text-gray-400 cursor-pointer">
+          <div
+            className="item-center text-gray-400 cursor-pointer"
+            data-cy="todo-title-edit-button"
+          >
             <HiOutlinePencilAlt
               size={20}
               onClick={() => setEditTitle(!editTitle)}
@@ -193,6 +196,7 @@ export default function Detail() {
         <div className="flex">
           <div>
             <Buttons
+              data-cy="todo-sort-button"
               className={
                 "flex justify-between items-center border-gray-300 border p-3 mr-2"
               }
@@ -202,6 +206,7 @@ export default function Detail() {
           </div>
           <Buttons
             onClick={() => handleAddData()}
+            data-cy="todo-add-button"
             className={"flex justify-between bg-primary py-3 px-6 items-center"}
           >
             <BsPlusLg className="mr-3" /> Tambah
@@ -247,6 +252,7 @@ export default function Detail() {
       {/* Modal Add Data */}
       <Modal
         headerTitle={"Tambah List Item"}
+        data-cy="modal-add-title"
         view={modalAdd}
         handleClose={() => setModalAdd(!modalAdd)}
         btn_3={"Simpan"}
@@ -259,10 +265,12 @@ export default function Detail() {
             onChange={(e) => setValueInput(e.target.value)}
             value={valueInput}
             label="Nama list item..."
+            data-cy="modal-add-name-title"
           />
           <div className="w-72 mt-10">
             <Select
               label="Priority"
+              data-cy="modal-add-priority-title"
               animate={{
                 mount: { y: 25 },
                 unmount: { y: 0 },

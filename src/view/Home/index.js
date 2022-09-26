@@ -55,10 +55,13 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-between">
-        <h1 className="font-black text-4xl">Activity</h1>
+        <h1 className="font-black text-4xl" data-cy="activity-title">
+          Activity
+        </h1>
         <Buttons
           onClick={handlePostData}
           className={"flex justify-between py-3 px-6 bg-primary items-center"}
+          data-cy="activity-add-button"
         >
           <BsPlusLg className="mr-3" /> Tambah
         </Buttons>
@@ -101,13 +104,14 @@ export default function Home() {
         view={viewModal}
         handleSubmit={() => handleDeleteData(dataItem?.id)}
         handleClose={() => setViewModal(!viewModal)}
+        data-cy="todo-modal-delete"
       >
         {/*body*/}
         <div className="relative p-1">
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-8" data-cy="modal-delete-icon">
             <img src={Ic_Alert} alt="alert" />
           </div>
-          <div>
+          <div data-cy="modal-delete-title">
             <p className="text-lg text-center mb-8">
               Apakah anda yakin menghapus activity{" "}
               <span className="font-bold">“{dataItem?.title}“</span>?
@@ -123,8 +127,13 @@ export default function Home() {
         {/*body*/}
         <div className="">
           <div className="flex items-center px-4 mb-1">
-            <img src={Ic_Info} alt="Info" className="mr-4" />
-            <p>Activity berhasil dihapus</p>
+            <img
+              data-cy="modal-information-icon"
+              src={Ic_Info}
+              alt="Info"
+              className="mr-4"
+            />
+            <p data-cy="modal-information-title">Activity berhasil dihapus</p>
           </div>
         </div>
       </Modal>

@@ -67,6 +67,7 @@ export default function Modal({
                 >
                   {btn_1 && (
                     <button
+                      data-cy="modal-delete-cancel-button"
                       className="bg-secondary font-medium text-md rounded-3xl px-14 py-3 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                       type="button"
                       onClick={handleClose}
@@ -76,6 +77,7 @@ export default function Modal({
                   )}
                   {btn_2 && (
                     <button
+                      data-cy="modal-delete-confirm-button"
                       className="bg-danger text-white active:bg-red-600 font-bold text-md px-14 py-3 rounded-3xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                       type="button"
                       onClick={handleSubmit}
@@ -85,6 +87,7 @@ export default function Modal({
                   )}
                   {btn_3 && (
                     <button
+                      data-cy="modal-add-save-button"
                       className="bg-primary text-white active:bg-primary font-bold text-md px-14 py-3 rounded-3xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                       type="button"
                       onClick={handleSubmit_btn3}

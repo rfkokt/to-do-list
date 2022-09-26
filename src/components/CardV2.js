@@ -27,6 +27,7 @@ export default function CardV2({
       <div className="flex p-5 justify-between items-center">
         <div className="flex items-center">
           <input
+            data-cy="todo-item-checkbox"
             type={"checkbox"}
             onClick={(e) => {
               onClick();
@@ -35,8 +36,12 @@ export default function CardV2({
             checked={checked}
             className="mr-4 h-5 w-5 bg-blue-900"
           />
-          <div className={`rounded-full ${colorPriority} h-4 w-4 mr-4`} />
+          <div
+            data-cy="todo-item-priority-indicator"
+            className={`rounded-full ${colorPriority} h-4 w-4 mr-4`}
+          />
           <h1
+            data-cy="todo-item-title"
             className={`${
               checked ? "line-through text-gray-400" : ""
             } flex items-center mr-4`}
@@ -45,6 +50,7 @@ export default function CardV2({
           </h1>
           <div
             className="item-center text-gray-400 cursor-pointer"
+            data-cy="todo-item-edit-button"
             onClick={onEdit}
           >
             <HiOutlinePencilAlt size={15} />
@@ -53,6 +59,7 @@ export default function CardV2({
         <p
           onClick={onDelete}
           className="flex justify-between items-center cursor-pointer"
+          data-cy="todo-item-delete-button"
         >
           <RiDeleteBin6Line />
         </p>
