@@ -258,7 +258,7 @@ export default function Detail() {
             variant="outlined"
             onChange={(e) => setValueInput(e.target.value)}
             value={valueInput}
-            label="NAMA LIST ITEM"
+            label="Nama list item..."
           />
           <div className="w-72 mt-10">
             <Select
