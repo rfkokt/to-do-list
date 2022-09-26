@@ -123,6 +123,7 @@ export default function Home() {
         width={"sm"}
         view={viewAlert}
         handleClose={() => setViewAlert(!viewAlert)}
+        data-cy="modal-information"
       >
         {/*body*/}
         <div className="">
