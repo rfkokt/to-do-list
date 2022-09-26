@@ -76,7 +76,7 @@ export default function Modal({
                   >
                     {btn_1 && (
                       <button
-                        data-cy="modal-delete-cancel-button"
+                        data-cy="modal-delete"
                         className="bg-secondary font-medium text-md rounded-3xl px-14 py-3 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={handleClose}
