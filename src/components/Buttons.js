@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 export default function Buttons({ children, className, onClick }) {
-    return (
-        <button onClick={onClick} className={`bg-primary text-white font-medium py-3 px-6 rounded-full ${className}`}>
-            {children}
-        </button>
-    )
+  return (
+    <button
+      onClick={onClick}
+      className={` text-white font-medium  rounded-full ${className}`}
+    >
+      {children}
+    </button>
+  );
 }
