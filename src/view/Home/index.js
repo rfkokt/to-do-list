@@ -61,7 +61,7 @@ export default function Home() {
         <Buttons
           onClick={handlePostData}
           className={"flex justify-between py-3 px-6 bg-primary items-center"}
-          data-cy="activity-add-button"
+          data_cy="activity-add-button"
         >
           <BsPlusLg className="mr-3" /> Tambah
         </Buttons>
